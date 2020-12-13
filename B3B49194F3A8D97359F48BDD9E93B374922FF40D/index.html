@@ -4,6 +4,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-32x32.png">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <title>Welcome Guiltys | Cloud </title>
 
 <head>
@@ -22,7 +23,7 @@
 
     min-height: 100vh;
     text-align: center;
-    background: linear-gradient(-45deg, #21d4fd, #b721ff, #23a6d5, #23d5ab);
+    background: linear-gradient(358deg, #000000, #002fa6, #000000);
     background-size: 400% 400%;
     animation: gradient 20s ease infinite;
     color: #fff;
@@ -38,15 +39,15 @@
 
   @keyframes gradient {
     0% {
-      background-position: 0% 50%;
+      background-position: 0%35%;
     }
 
-    50% {
+  35% {
       background-position: 0% 100%;
     }
 
     100% {
-      background-position: 0% 50%;
+      background-position: 0%35%;
     }
   }
 
@@ -64,6 +65,14 @@
 
 
   }
+  #particles-js {
+    background: transparent;
+  position: absolute;
+  width: 800%;
+  height: 800%;
+  
+}
+
 
 
   ::selection {
@@ -116,15 +125,15 @@
     border-right: 2px solid white;
     padding: 10px 25px;
     margin: 15px 25px;
-    transition: 150ms;
+    transition: 35ms;
   }
 
   a:active {
-
-    border-top: 3px solid white;
-    border-left: 3px solid white;
-    border-bottom: 1px solid white;
-    border-right: 1px solid white;
+    opacity: 95%;
+    border-top: 3px solid rgb(175, 175, 175);
+    border-left: 3px solid rgb(175, 175, 175);
+    border-bottom: 1px solid rgb(175, 175, 175);
+    border-right: 1px solid rgb(175, 175, 175);
 
   }
 
@@ -132,15 +141,21 @@
     text-transform: lowercase;
     padding-top: 7px;
     padding-bottom: 7px;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: 6em;
+    margin-right: 6em;
   }
 
   .pre {
     display: none;
 
   }
-
+  h3 {
+    border-bottom: 1px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 5em;
+    margin-right: 5em;
+  }
   .bn {
     font-weight: 600;
     border: 1px solid white;
@@ -203,7 +218,7 @@
       opacity: 1;
     }
 
-    50% {
+  35% {
       opacity: 0;
     }
 
@@ -217,7 +232,7 @@
       opacity: 1;
     }
 
-    50% {
+  35% {
       opacity: 0;
     }
 
@@ -231,7 +246,7 @@
       opacity: 1;
     }
 
-    50% {
+  35% {
       opacity: 0;
     }
 
@@ -245,7 +260,7 @@
       opacity: 1;
     }
 
-    50% {
+  35% {
       opacity: 0;
     }
 
@@ -271,7 +286,7 @@
 
   .png img {
 
-    width: 50%;
+    width:35%;
   }
 
   .pngs {
@@ -310,17 +325,16 @@
 
   <div class="header">
     <div class="header-text">
-
+<!-- Hero Text -->
       <h1>Guilty Cloud</h1>
-
-      <p> File-file logo guilty :D </p>
-
+      <p>Use the download button ! | File-file logo guilty :D  </p> <!-- Subtext -->
+      <!-- Recommendation Browser -->
       <p class="chrome">Recommended to use chrome broswer unless web will not run properly</p>
 
 
     </div>
   </div>
-
+  <div id="particles-js"></div>
   <p class="scroll">Scroll</p>
 
   <br><br>
@@ -328,16 +342,14 @@
     <div class="content"></div>
     <span class="logo">
       <div class="bn">
-        <h2><em>Brand New</em></h2>
 
+        <h2><em>Brand New</em></h2> <!-- Brand New Section -->
+        
         <a class="toggle-button">guilty v2</a>
-
         <div class="pre">
           <p> click again to hide </p>
           <a href="#lgtxt" class="bnb">Animated</a>
           <a href="#gv2i" class="bnb2">PNG</a>
-
-
         </div>
       </div>
 
@@ -346,7 +358,7 @@
   <div class="linksp">
     <div class="links">
       <div class="animlogo">
-        <h3>ANIMATED LOGO</h3>
+        <h3>ANIMATED LOGO'S</h3>
         <br>
 
         <a class="toggle-button" id="gv2a">guilty v2 logo</a>
@@ -355,14 +367,14 @@
           <p> click the button again to hide </p>
           <div class="preview">
 
-            <video width="65%" height="65%" control controlsList="nodownload" autoplay loop muted>
+            <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
               <source src="animated/gv2a.webm" type="video/webm" class="gv2vid">
 
             </video>
 
 
           </div>
-          <a href="animated/gv2a.mp4" class="download" download>download</a>
+          <a href="animated/gv2a.mp4" class="download" download>Download</a>
 
         </div>
         <a class="toggle-button">guilty gen 2 (glitch)</a>
@@ -370,7 +382,7 @@
           <div class="preview"></div>
 
           <p> click the button again to hide </p>
-          <video width="65%" height="65%" control controlsList="nodownload" autoplay loop muted>
+          <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
             <source src="animated/gg.webm" type="video/webm">
 
           </video>
@@ -379,7 +391,7 @@
         <a class="toggle-button">guilty rainbow storm</a>
         <div class="pre" id="3">
           <div class="preview">
-            <video width="65%" height="65%" control controlsList="nodownload" autoplay loop muted>
+            <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
               <source src="animated/grs.webm" type="video/webm">
 
             </video>
@@ -391,7 +403,7 @@
         <div class="pre" id="4">
           <p> click again to hide </p>
           <div class="preview">
-            <video width="65%" height="65%" control controlsList="nodownload" autoplay loop muted>
+            <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
               <source src="animated/gwt.webm" type="video/webm">
 
             </video>
@@ -401,7 +413,7 @@
           <div class="pre" id="5">
             <p> click again to hide </p>
             <div class="preview">
-              <video width="65%" height="65%" control controlsList="nodownload" autoplay loop muted>
+              <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
                 <source src="animated/to.webm" type="video/webm">
 
               </video>
@@ -424,7 +436,7 @@
       <br><br>
       <a class="toggle-button">v1</a>
       <div class="preview" style="display:none">
-        <video width="65%" height="65%" control controlsList="nodownload" autoplay loop muted>
+        <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
           <source src="animated/ulti.webm" type="video/webm">
 
         </video>
@@ -434,7 +446,7 @@
       </div>
       <a class="toggle-button">v2</a>
       <div class="preview" style="display:none">
-        <video width="65%" height="65%" control controlsList="nodownload" autoplay loop muted>
+        <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
           <source src="animated/ulti2.webm" type="video/webm">
 
         </video>
@@ -451,23 +463,25 @@
         <a class="toggle-button">default</a>
         <div class="prepng" style="display:none">
 
-          <div><img src="logo/v1/gl1w.webp" style="max-width: 50%"></div>
+          <div><img src="logo/v1/gl1w.webp" style="max-width:35%"></div>
           <a class="download" href="logo/v1/gl1w.png" download>download </a>
-          <div><img src="logo/v1/gl1.webp" style="max-width: 50%"></div>
+          <div><img src="logo/v1/gl1.webp" style="max-width:35%"></div>
           <a class="download" href="logo/v1/gl1.png" download>download </a>
         </div>
 
         <a class="toggle-button">v2</a>
         <div class="prepng2" style="display:none">
 
-          <div><img src="logo/v2/logo2w.webp" style="max-width: 50%"></div>
+          <div><img src="logo/v2/logo2w.webp" style="max-width:35%"></div>
           <a class="download" href="logo/v2/logo2w.png" download>download </a>
-          <div><img src="logo/v2/logo2.webp" style="max-width: 50%"></div>
+          <div><img src="logo/v2/logo2.webp" style="max-width:35%"></div>
           <a class="download" href="logo/v1/logo2.png" download>download </a>
         </div>
       </div>
     </div>
   </div>
+
+ 
 
   <script>
     //button h&show
