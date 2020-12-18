@@ -9,7 +9,10 @@
 		href="/B3B49194F3A8D97359F48BDD9E93B374922FF40D/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16"
 		href="/B3B49194F3A8D97359F48BDD9E93B374922FF40D/favicon/favicon-16x16.png">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,800;0,900;1,900&display=swap"
+		rel="stylesheet">
 	<style>
 		html {
 			font-size: 100%
@@ -18,11 +21,15 @@
 		body {
 			min-height: 100vh;
 			text-align: center;
-			background: linear-gradient(-45deg, #21d4fd, #b721ff, #23a6d5, #23d5ab);
+			background: rgb(14, 0, 255);
+			background: -moz-linear-gradient(0deg, rgba(14, 0, 255, 1) 0%, rgba(2, 0, 36, 1) 100%);
+			background: -webkit-linear-gradient(0deg, rgba(14, 0, 255, 1) 0%, rgba(2, 0, 36, 1) 100%);
+			background: linear-gradient(0deg, rgba(14, 0, 255, 1) 0%, rgba(2, 0, 36, 1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e00ff", endColorstr="#020024", GradientType=1);
 			background-size: 400% 400%;
 			animation: gradient 20s ease infinite;
 			color: #fff;
-			font-family: 'Open Sans', sans-serif;
+			font-family: 'Montserrat', sans-serif;
 		}
 
 		@keyframes gradient {
@@ -37,6 +44,13 @@
 			100% {
 				background-position: 0% 50%;
 			}
+		}
+
+		h1 {
+			font-size: 3em;
+			font-weight: 900;
+			text-transform: uppercase;
+			line-height: 20%;
 		}
 
 		button {
@@ -96,13 +110,13 @@
 
 		input:focus {
 
-			border-bottom: 1px solid rgb(0, 0, 0);
+			border-bottom: 1px solid rgb(255, 255, 255);
 			opacity: 90%;
 			transition: 250ms ease;
 		}
 
 		input::placeholder {
-			color: rgb(0, 0, 0);
+			color: rgb(255, 255, 255);
 			opacity: 100%;
 
 			transition: 250ms ease;
@@ -126,7 +140,8 @@
 		<div class="horizontal">
 			<div class="vertical">
 				<div class="box">
-					<h1>Guilty Cloud</h1>
+					<h1>Guilty</h1>
+					<h1>CLOUD</h1>
 					<input style="margin: 16px; text-align: center;" id="password" type="password"
 						placeholder="Passwordnya skrtt" /> <br />
 					<button id="loginbutton" type="button">Enter</button>

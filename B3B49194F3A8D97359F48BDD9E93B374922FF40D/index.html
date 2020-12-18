@@ -5,11 +5,14 @@
 <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-32x32.png">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<title>Welcome Guiltys | Cloud </title>
+<title>Cloud | Guiltyness </title>
 
 <head>
   <link href="https://vjs.zencdn.net/7.7.6/video-js.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,800;0,900;1,900&display=swap"
+		rel="stylesheet">
 
   <!-- support IE8 (for Video.js versions prior to v7) -->
 
@@ -27,13 +30,7 @@
     background-size: 400% 400%;
     animation: gradient 20s ease infinite;
     color: #fff;
-    font-family: 'Open Sans', sans-serif;
-
-
-
-
-
-
+    font-family: 'Montserrat', sans-serif;
 
   }
 
@@ -282,13 +279,21 @@
 
   .png img {
 
-    width:35%;
+    width:25%;
+    position: relative;
   }
 
   .pngs {
     margin-top: 4em;
     margin-bottom: 10em;
   }
+
+  h1 {
+			font-size: 3em;
+			font-weight: 900;
+			text-transform: uppercase;
+			line-height: 20%;
+		}
 
   @media only screen and (min-width: 768px) {
 
@@ -313,6 +318,7 @@
     img {
       width: 20%;
     }
+
 
   }
 </style>
@@ -356,6 +362,13 @@
       <div class="animlogo">
         <h3>ANIMATED LOGO'S</h3>
         <br>
+        <a class="toggle-button">Guilty V2 3D (HOT!)</a>
+        <div class="preview" style="display:none">
+          <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
+            <source src="logo/v2/v23d.webm" type="video/webm">
+          </video>
+          <a href="logo/v2/v23d.mp4" class="download" download>Download</a>
+        </div>
 
         <a class="toggle-button" id="gv2a">guilty v2 logo</a>
 
@@ -367,6 +380,7 @@
               <source src="animated/gv2a.webm" type="video/webm" class="gv2vid">
 
             </video>
+
 
 
           </div>
@@ -434,7 +448,6 @@
       <div class="preview" style="display:none">
         <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
           <source src="animated/ulti.webm" type="video/webm">
-
         </video>
 
         <a href="animated/ulti.mp4" class="download" download>download</a>
