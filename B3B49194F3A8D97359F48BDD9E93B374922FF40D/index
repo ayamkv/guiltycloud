@@ -91,7 +91,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 450px;
+    height: 600px;
   }
 
   a {
@@ -161,9 +161,9 @@
 
   .bn {
     font-weight: 600;
-    margin: 80px;
+    margin: 90px;
     margin-top: 20em;
-    margin-bottom: 3em;
+    margin-bottom: 30em;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 
@@ -294,7 +294,7 @@
     margin-top: 5em;
     letter-spacing: 1px;
   }
-
+ 
 
   .prepng a {
     display: block;
@@ -321,16 +321,6 @@
   .preview {
     margin-top: 5%;
   }
-  .chrome {
-      margin-top: 0;
-      margin-bottom: 0;
-      line-height: 1;
-    }
-    h1 {
-      margin-top: 0;
-      margin-bottom: 0;
-      line-height: 90%;
-    }
 
   @media only screen and (min-width: 768px) {
 
@@ -357,18 +347,13 @@
     }
 
     h1 {
-      margin-bottom: 0;
-      line-height: 50%;
+      line-height: 20%;
     }
 
     .header {
       height: 300px;
     }
-    .chrome {
-      margin-top: 0;
-      margin-bottom: 0;
-      line-height: 1;
-    }
+
 
   }
 </style>
@@ -376,12 +361,14 @@
 <body>
 
   <div class="header">
-    <div class="header-txt"></div>
+    
       <!-- Hero Text -->
       <h1>Guilty Cloud</h1>
       <p>Use the download button ! | File-file logo guilty :D </p> <!-- Subtext -->
       <!-- Recommendation Browser -->
       <p class="chrome">Recommended to use chrome broswer unless web will not run properly</p>
+
+
     </div>
   </div>
 
@@ -588,10 +575,9 @@
 
 
   <script>
-
     //button h&show
     //jquery
-  
+
     $(document).ready(function () {
       $(".toggle-button").click(function () {
         $(this).next().fadeToggle();
@@ -605,7 +591,7 @@
         $("#1").fadeToggle();
 
       });
-   
+
 
     });
   </script>
