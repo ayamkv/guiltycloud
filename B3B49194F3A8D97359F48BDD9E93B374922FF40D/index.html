@@ -59,27 +59,15 @@
     /* Firefox */
     -ms-user-select: none;
     /* Internet Explorer/Edge */
-
-
   }
-
-
-
-
-
-
   ::selection {
     color: white;
     background-color: black;
 
   }
-
   p {
     line-height: 1;
-
-
   }
-
   .chrome {
     opacity: 80%;
     font-size: 75%;
@@ -88,7 +76,6 @@
   .header {
     top: 20%;
     padding: 15px;
-    ;
     transform: translateY(-10%);
     margin-right: 5%;
     margin-left: 5%;
@@ -102,8 +89,6 @@
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-
-
   }
 
   a {
@@ -124,9 +109,7 @@
     display: block;
     text-decoration: none;
     color: white;
-
     cursor: pointer;
-
     opacity: 75%;
     padding: 10px 25px;
     margin: 15px 25px;
@@ -146,7 +129,6 @@
 
   a:hover {
     padding: 15px 25px;
-
     opacity: 100%;
     border: 3px solid rgba(255, 255, 255, 0.18);
   }
@@ -160,12 +142,10 @@
     padding-bottom: 10px;
     margin-left: 7em;
     margin-right: 7em;
-
   }
 
   .pre {
     display: none;
-
   }
 
   h3 {
@@ -183,7 +163,6 @@
     margin-bottom: 3em;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
 
@@ -192,8 +171,6 @@
   .bn .download {
     margin: auto;
 
-
-
   }
 
   .lgtext {
@@ -201,8 +178,6 @@
     display: block;
     padding: 1%;
     border: 1px solid white;
-
-
 
   }
 
@@ -224,10 +199,7 @@
 
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-
   }
-
-
 
   .scroll {
     -webkit-touch-callout: none;
@@ -317,11 +289,9 @@
 
   .prepng a {
     display: block;
-
   }
 
   .png img {
-
     width: 25%;
     position: relative;
   }
@@ -362,7 +332,6 @@
       margin: 35%;
       margin-bottom: 0;
       margin-top: 0;
-
     }
 
     .bn {
@@ -372,21 +341,19 @@
     .linksp {
       margin: 35%;
       margin-top: 4em;
+      padding: 1%;
+
     }
 
     img {
       padding: 15px;
       width: 20%;
-
-
       border-radius: 30px;
       border: 3px solid rgba(255, 255, 255, 0.035)
     }
 
     img:hover {
-
       border: 4px solid rgba(255, 255, 255, 0.474);
-
       transition: 450ms all ease;
     }
 
@@ -402,7 +369,6 @@
       transform: translateY(-20%);
       margin-right: 20%;
       margin-left: 20%;
-
     }
 
     .chrome {
@@ -410,8 +376,7 @@
       margin-bottom: 0;
       line-height: 1;
     }
-
-
+  
 
   }
 </style>
@@ -569,11 +534,9 @@
 
 
 
-    <a class="toggle-button">ultimate guilty</a>
+    <a class="toggle-button">ultimate guilty arkbroker</a>
     <div class="pre" id="4">
       <p> click again to hide </p>
-      <h6>animated by @arkbroker</h6>
-      <br><br>
       <a class="toggle-button" style="margin: 0% 35% 0% 35% ">v1</a>
 
       <div class="preview" style="display:none">
@@ -635,21 +598,20 @@
     //button h&show
     //jquery
 
+
     $(document).ready(function () {
       $(".toggle-button").click(function () {
-        $(this).next().fadeToggle();
+        $(this).next().slideToggle([200]);
 
       });
       $(".bnb2").click(function () {
-        $(".prepng3").fadeToggle();
+        $(".prepng3").slideToggle(200);
 
       });
       $(".bnb").click(function () {
-        $("#1").fadeToggle();
+        $("#1").slideToggle(200);
 
       });
-
-
     });
   </script>
 </body>
