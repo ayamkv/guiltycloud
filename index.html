@@ -183,17 +183,15 @@
 				url: url,
 				dataType: "html",
 				success: function (data) {
-					
+			
 					window.location = url;
-
 				},
 				error: function (xhr, ajaxOptions, thrownError) {
 
-
 					parent.location.hash = hash;
-					history.replaceState({}, null, "/index.html");
+					history.replaceState({}, null, "/index");
 					//$("#wrongPassword").show();
-					$("#password").attr("placeholder", "wrong password dumbo");
+					$("#password").attr("placeholder", "wrong password 5head");
 					$("#password").val("");
 				}
 			});
