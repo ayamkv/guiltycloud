@@ -1,208 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="google-site-verification" content="2f8NCUVhbGT1QVm_6Lx_LD01Kea7nUJb9V9iqeBBqRU" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Login | Guiltyness</title>
-	<link rel="icon" type="image/png" sizes="32x32"
-		href="/B3B49194F3A8D97359F48BDD9E93B374922FF40D/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16"
-		href="/B3B49194F3A8D97359F48BDD9E93B374922FF40D/favicon/favicon-16x16.png">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,800;0,900;1,900&display=swap"
-		rel="stylesheet">
-	<style>
-		html {
-			font-size: 100%
-		}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="google-site-verification" content="2f8NCUVhbGT1QVm_6Lx_LD01Kea7nUJb9V9iqeBBqRU"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
 
-		body {
-			min-height: 100vh;
-			text-align: center;
-			background: rgb(14, 0, 255);
-			background: -moz-linear-gradient(0deg, rgba(14, 0, 255, 1) 0%, rgb(64, 188, 255) 100%);
-			background: -webkit-linear-gradient(0deg, rgba(14, 0, 255, 1) 0%, rgb(113, 198, 255) 100%);
-			background: linear-gradient(0deg, rgba(14, 0, 255, 1) 0%, rgb(0, 174, 237) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e00ff", endColorstr="#020024", GradientType=1);
-			background-size: 400% 400%;
-			animation: gradient 20s ease infinite;
-			color: #fff;
-			font-family: 'Montserrat', sans-serif;
-		}
+        <title>Login | Guiltyness</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/B3B49194F3A8D97359F48BDD9E93B374922FF40D/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/B3B49194F3A8D97359F48BDD9E93B374922FF40D/favicon/favicon-16x16.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
+        <script>
+            history.replaceState({}, null, "/");
+        </script>
+        <style>
+            html {
+                font-size: 100%
+            }
+            body {
+                min-height: 100vh;
+                text-align: center;
+                background: rgb(14, 0, 255);
+                background: -moz-linear-gradient(0deg, rgba(14, 0, 255, 1) 0%, rgb(64, 188, 255) 100%);
+                background: -webkit-linear-gradient(0deg, rgba(14, 0, 255, 1) 0%, rgb(113, 198, 255) 100%);
+                background: linear-gradient(0deg, rgba(14, 0, 255, 1) 0%, rgb(0, 174, 237) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0e00ff", endColorstr="#020024", GradientType=1);
+                background-size: 400% 400%;
+                animation: gradient 20s ease infinite;
+                color: #fff;
+                font-family: 'Montserrat', sans-serif;
+            }
 
-		@keyframes gradient {
-			0% {
-				background-position: 0% 50%;
-			}
+            @keyframes gradient {
+                0% {
+                    background-position: 0 50%;
+                }
 
-			50% {
-				background-position: 0% 100%;
-			}
+                50% {
+                    background-position: 0 100%;
+                }
 
-			100% {
-				background-position: 0% 50%;
-			}
-		}
+                100% {
+                    background-position: 0 50%;
+                }
+            }
 
-		h1 {
-			font-size: 3em;
-			font-weight: 900;
-			text-transform: uppercase;
-			line-height: 20%;
-		}
+            h1 {
+                font-size: 3em;
+                font-weight: 900;
+                text-transform: uppercase;
+                line-height: 20%;
+            }
 
-		button {
-			
-
-			padding: 10px 25px;
-			margin: 1em 5em 1em 5em;
-			transition: 150ms;
-			transform: translate(25%, 50%);
-			text-align: center;
- 	 	  display: block;
-   		  text-decoration: none;
-  		  color: white;
-  		  cursor: pointer;
- 		  opacity: 75%;
-  		  transition: 300ms ease;
-  		  background: rgba(255, 255, 255, 0.25);
-  		  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  	  border-radius: 10px;
-   		 border: 1px solid rgba(255, 255, 255, 0.18);
-  }
-		
-  button:active {
-
-    opacity: 95%;
-  }
-
-  button:hover {
-
-    opacity: 100%;
-    border: 2px solid rgba(255, 255, 255, 0.18);
-  }
-
-		.horizontal {
-			height: 100%;
-			position: relative;
-		}
-
-		.vertical {
-			margin: 0;
-			position: absolute;
-			left: 50%;
-			position: absolute;
-			top: 50%;
-
-			transform: translate(-50%, 50%);
-		}
-
-		input {
-			background: transparent;
-			color: white;
-			padding: 10px 25px;
-			outline: none;
-			border: 0px solid white;
-			border-bottom: 1px solid white;
-			opacity: 75%;
-
-  		  background: rgba(255, 255, 255, 0.25);
-  		  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-
-  	  border-radius: 10px;
-   		 border: 1px solid rgba(255, 255, 255, 0.18);
-
-			transition: 250ms ease;
-
-		}
-
-		input:focus {
-
-			padding: 10px 25px;
-    opacity: 95%;
-    border: 5px solid rgba(255, 255, 255, 0.18);
-		}
-
-		input::placeholder {
-			color: rgb(255, 255, 255);
-			opacity: 100%;
-
-			transition: 250ms ease;
-		}
-
-		input:focus::placeholder {
-
-			color: rgb(0, 255, 242);
-			opacity: 0%;
-		}
-
-		#wrongPassword {
-			color: red;
-		}
-	</style>
-</head>
-<body>
-	<div id="loginbox" class="lightbox">
-		<div class="horizontal">
-			<div class="vertical">
-				<div class="box">
-					<h1>Guilty</h1>
-					<h1>CLOUD</h1>
-					<input style="margin: 16px; text-align: center;" id="password" type="password"
-						placeholder="Passwordnya skrtt" /> <br />
-					<button id="loginbutton" type="button">Enter</button>
-					<p id="wrongPassword" style="display: none">wroong password</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-	<script type="text/javascript"
-		src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
-
-	<script type="text/javascript">
-		"use strict";
+            button {
 
 
-		function loadPage(pwd) {
+                padding: 10px 25px;
+                margin: 1em 5em;
+                transition: 150ms;
+                transform: translate(25%, 50%);
+                text-align: center;
+                display: block;
+                text-decoration: none;
+                color: white;
+                cursor: pointer;
+                opacity: 75%;
+                transition: 300ms ease;
+                background: rgba(255, 255, 255, 0.25);
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.18);
+            }
 
-			var hash = pwd;
-			hash = Sha1.hash(pwd);
-			var url = hash + "/index.html";
+            button:active {
 
-			$.ajax({
-				url: url,
-				dataType: "html",
-				success: function (data) {
-			
-					window.location = url;
-				},
-				error: function (xhr, ajaxOptions, thrownError) {
+                opacity: 95%;
+            }
 
-					parent.location.hash = hash;
-					history.replaceState({}, null, "/index");
-					//$("#wrongPassword").show();
-					$("#password").attr("placeholder", "wrong password 5head");
-					$("#password").val("");
-				}
-			});
-		}
+            button:hover {
+
+                opacity: 100%;
+                border: 2px solid rgba(255, 255, 255, 0.18);
+            }
+
+            .horizontal {
+                height: 100%;
+                position: relative;
+            }
+
+            .vertical {
+                margin: 0;
+                position: absolute;
+                left: 50%;
+                position: absolute;
+                top: 50%;
+
+                transform: translate(-50%, 50%);
+            }
+
+            input {
+                background: transparent;
+                color: white;
+                padding: 10px 25px;
+                outline: none;
+                border: 0 solid white;
+                border-bottom: 1px solid white;
+                opacity: 75%;
+
+                background: rgba(255, 255, 255, 0.25);
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.18);
+
+                transition: 250ms ease;
+
+            }
+
+            input:focus {
+
+                padding: 10px 25px;
+                opacity: 95%;
+                border: 5px solid rgba(255, 255, 255, 0.18);
+            }
+
+            input::placeholder {
+                color: rgb(255, 255, 255);
+                opacity: 100%;
+
+                transition: 250ms ease;
+            }
+
+            input:focus::placeholder {
+
+                color: rgb(0, 255, 242);
+                opacity: 0;
+            }
+
+            #wrongPassword {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="loginbox" class="lightbox">
+            <div class="horizontal">
+                <div class="vertical">
+                    <div class="box">
+                        <h1>Guilty</h1>
+                        <h1>CLOUD</h1>
+                        <input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="Passwordnya skrtt"/>
+                        <br/>
+                        <button id="loginbutton" type="button">Enter</button>
+                        <p id="wrongPassword" style="display: none">wroong password</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            "use strict";
 
 
-		$("#loginbutton").on("click", function () {
-			loadPage($("#password").val());
-		});
-		$("#password").keypress(function (e) {
-			if (e.which == 13) {
+            function loadPage(pwd) {
 
-				loadPage($("#password").val());
-			}
-		});
-		$("#password").focus();
-		
-	</script>
-</body>
+                var hash = pwd;
+                hash = Sha1.hash(pwd);
+                var url = hash + "/index.html";
+
+                $.ajax({
+                    url: url,
+                    dataType: "html",
+                    success: function (data) {
+
+                        window.location = url;
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+
+                        parent.location.hash = hash;
+                        history.replaceState({}, null, "/");
+                        // $("#wrongPassword").show();
+                        $("#password").attr("placeholder", "wrong password 5head");
+                        $("#password").val("");
+                    }
+                });
+            }
+
+
+            $("#loginbutton").on("click", function () {
+                loadPage($("#password").val());
+            });
+            $("#password").keypress(function (e) {
+                if (e.which == 13) {
+
+                    loadPage($("#password").val());
+                }
+            });
+            $("#password").focus();
+        </script>
+    </body>
 </html>
