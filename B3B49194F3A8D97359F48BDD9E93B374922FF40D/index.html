@@ -20,6 +20,7 @@
 </head>
 <style>
   html {
+    scroll-behavior: smooth;
     font-size: 100%
   }
 
@@ -579,8 +580,8 @@
           <div><img src="logo/v2/logo2.webp" style="max-width:35%"></div>
           <a class="download" href="logo/v2/logo2.png" download>download </a>
         </div>
-        <a class="toggle-button">G</a>
-        <div class="prepng3" id="gtext" style="display:none">
+        <a class="toggle-button" id="gtext">G</a>
+        <div class="prepng3"  style="display:none">
 
           <div><img src="logo/text/gtext.webp" style="max-width:35%"></div>
           <a class="download" href="logo/text/gtext.png" download>download </a>
@@ -598,7 +599,10 @@
 
 
     $(document).ready(function () {
-      history.replaceState({}, null, "/index");
+      let stateObj = {
+    foo: "index",
+}
+      history.pushState({}, stateObj, "/index");
       $(".toggle-button").click(function () {
         $(this).next().slideToggle([200]);
 
