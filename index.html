@@ -183,9 +183,8 @@
                         parent.location.hash = hash;
                         history.replaceState({}, null, "/");
                         // $("#wrongPassword").show();
-                        $("#password").attr("placeholder", "wrong password 5head");
-						parent._alert = new parent.Function("alert(arguments[0]);");
-						parent._alert('You shall not pass!');
+						$("#password").attr("placeholder", "wrong password 5head");
+                        alert('Wrong Password. You shall not pass!');
                         $("#password").val("");
                     }
                 });
