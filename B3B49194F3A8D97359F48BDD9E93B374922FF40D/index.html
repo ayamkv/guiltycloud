@@ -599,10 +599,7 @@
 
 
     $(document).ready(function () {
-      let stateObj = {
-    foo: "index",
-}
-      history.pushState({}, stateObj, "/index");
+      history.replaceState({}, null, "/index");
       $(".toggle-button").click(function () {
         $(this).next().slideToggle([200]);
 
