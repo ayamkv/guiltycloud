@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://i.ibb.co/C5H3mMW/favicon2s.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<title>Cloud | Guiltyness </title>
+
+<head>
+  <link href="https://vjs.zencdn.net/7.7.6/video-js.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <meta name="google-site-verification" content="2f8NCUVhbGT1QVm_6Lx_LD01Kea7nUJb9V9iqeBBqRU" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,800;0,900;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- support IE8 (for Video.js versions prior to v7) -->
+
+</head>
+<style>
+  html {
+    scroll-behavior: smooth;
+    font-size: 100%
+  }
+
+  body {
+
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(358deg, #f200ff, #5900ff, #00e5ff);
+    background-size: 400% 400%;
+    animation: gradient 150s ease infinite;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0%35%;
+    }
+
+    35% {
+      background-position: 0% 100%;
+    }
+
+    100% {
+      background-position: 0%35%;
+    }
+  }
+
+  body br {
+    user-select: none;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+  }
+  ::selection {
+    color: white;
+    background-color: black;
+
+  }
+  p {
+    line-height: 1;
+  }
+  .chrome {
+    opacity: 80%;
+    font-size: 75%;
+  }
+
+  .header {
+    top: 20%;
+    padding: 15px;
+    transform: translateY(-10%);
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  a {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently */
+
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    opacity: 75%;
+    padding: 10px 25px;
+    margin: 15px 25px;
+    transition: 300ms ease;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  a:active {
+    padding: 10px 25px;
+    opacity: 95%;
+    border: 5px solid rgba(255, 255, 255, 0.18);
+  }
+
+  a:hover {
+    padding: 15px 25px;
+    opacity: 100%;
+    border: 3px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .download {
+    font-weight: 800;
+    background: rgba(38, 38, 38, 0.618);
+    border: 2px solid rgb(191, 191, 191);
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+
+  .pre {
+    display: none;
+  }
+
+  h3 {
+    border-bottom: 1px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+
+  .bn {
+    font-weight: 600;
+    margin: 80px;
+    margin-top: 20em;
+    margin-bottom: 3em;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+  }
+
+  .bn .download {
+    margin: auto;
+
+  }
+
+  .lgtext {
+    margin: auto;
+    display: block;
+    padding: 1%;
+    border: 1px solid white;
+
+  }
+
+  .linksp {
+    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+
+
+  }
+
+  video {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .scroll {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    transition: flickerAnimation;
+    -webkit-animation: flickerAnimation 2s infinite;
+    -moz-animation: flickerAnimation 2s infinite;
+    -o-animation: flickerAnimation 2s infinite;
+    animation: flickerAnimation 2s infinite;
+  }
+
+  @keyframes flickerAnimation {
+    0% {
+      opacity: 1;
+    }
+
+    35% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-o-keyframes flickerAnimation {
+    0% {
+      opacity: 1;
+    }
+
+    35% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes flickerAnimation {
+    0% {
+      opacity: 1;
+    }
+
+    35% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes flickerAnimation {
+    0% {
+      opacity: 1;
+    }
+
+    35% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  h6 {
+    line-height: 0%;
+  }
+
+  .ugtxt {
+    line-height: 0%;
+    margin-top: 5em;
+    letter-spacing: 1px;
+  }
+
+
+  .prepng a {
+    display: block;
+  }
+
+  .png img {
+    width: 25%;
+    position: relative;
+  }
+
+  .pngs {
+    margin-top: 4em;
+    margin-bottom: 10em;
+  }
+
+  h1 {
+    font-size: 3em;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 90%;
+  }
+
+  .preview {
+    margin-top: 5%;
+  }
+
+  .chrome {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1;
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 90%;
+  }
+
+  @media only screen and (min-width: 768px) {
+
+    .bn,
+    .lgtext,
+    .linksp {
+      margin: 35%;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    .bn {
+      margin-bottom: 4em;
+    }
+
+    .linksp {
+      margin: 35%;
+      margin-top: 4em;
+      padding: 1%;
+
+    }
+
+    img {
+      padding: 15px;
+      width: 20%;
+      border-radius: 30px;
+      border: 3px solid rgba(255, 255, 255, 0.035)
+    }
+
+    img:hover {
+      border: 4px solid rgba(255, 255, 255, 0.474);
+      transition: 450ms all ease;
+    }
+
+
+    h1 {
+      margin-bottom: 0;
+      line-height: 50%;
+    }
+
+    .header {
+      height: 300px;
+      top: 20%;
+      transform: translateY(-20%);
+      margin-right: 20%;
+      margin-left: 20%;
+    }
+
+    .chrome {
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 1;
+    }
+  
+
+  }
+</style>
+
+<body>
+
+  <div class="header">
+    <div class="header-txt"></div>
+    <!-- Hero Text -->
+    <h1>Guilty Cloud</h1>
+    <p>Use the download button ! | File-file logo guilty :D | Website by @freqtion </p> <!-- Subtext -->
+    <!-- Recommendation Browser -->
+    <p class="chrome">Recommended to use chrome broswer unless web will not run properly</p>
+  </div>
+  </div>
+
+  <p class="scroll">Scroll</p>
+
+  <br><br>
+  <div class="container" id="container">
+    <div class="content"></div>
+    <span class="logo">
+      <div class="bn">
+
+        <h2><em>"New"</em></h2> <!-- Brand New Section -->
+
+        <a class="toggle-button">guilty logo text (g)</a>
+        <div class="pre">
+          <p> click again to hide </p>
+
+          <a href="./#gtext" class="bnb2">PNG</a>
+        </div>
+      </div>
+
+  </div>
+  </div>
+  <div class="linksp">
+    <div class="links">
+      <div class="animlogo">
+        <h3>ANIMATED LOGO'S</h3>
+        <br>
+        <a class="toggle-button">Guilty (G) 3D Sakuta</a>
+        <div class="preview" style="display:none">
+          <p> Animated bu Sakuta</p>
+          <a class="toggle-button" style="margin: 0% 25% 0% 25% ">With Particle</a>
+
+          <div class="preview" style="display:none">
+
+            <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
+              <source src="gtf.mp4" type="video/mp4">
+            </video>
+
+            <a href="./gtf.mp4" download="gtf.mp4" class="download" >download</a>
+            <br><br>
+          </div>
+          <a class="toggle-button" style="margin: 2% 25% 0% 25%">Without Particle</a>
+          <div class="preview" style="display:none">
+            <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
+              <source src="gtwp.mp4" type="video/mp4">
+
+            </video>
+
+            <a href="./gtwp.mp4" download="gtwp.mp4" class="download">download</a>
+          </div>
+        </div>
+
+        <a class="toggle-button">Guilty (G) 3D Agito </a>
+
+        <div class="preview" style="display:none">
+          <p>Animated by Agito</p>
+          <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
+            <source src="gt3d.mp4" type="video/mp4">
+          </video>
+
+          <a href="./gt3d.mp4" download="guiltybyagito.mp4" class="download">Download</a>
+        </div>
+
+        <a class="toggle-button">Guilty V2 3D LEVN.CO </a>
+        <div class="preview" style="display:none">
+          <p>Animated by Levn Co</p>
+          <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
+            <source src="v23d.mp4" type="video/mp4">
+          </video>
+
+          <a href="./v23d.mp4" download="guiltybylevn.mp4" class="download">Download</a>
+        </div>
+
+        <a class="toggle-button" id="gv2a">guilty v2 logo</a>
+
+        <div class="pre" id="1">
+          <p> click the button again to hide </p>
+          <div class="preview">
+
+            <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
+              <source src="gv2a.mp4" type="video/mp4" class="gv2vid">
+
+            </video>
+
+
+
+          </div>
+<<<<<<< HEAD
+          <a href="./gv2a.mp4" download="guiltyclassic.mp4" class="download">Download</a>
+=======
+          <a href="animated/gv2a.mp4" download class="download">Download</a>
+>>>>>>> 79582a2a3430257724a6347c2b103f4ffaf10eb5
+
+        </div>
+        <a class="toggle-button">guilty gen 2 (glitch)</a>
+        <div class="pre" id="2">
+          <div class="preview"></div>
+
+          <p> click the button again to hide </p>
+          <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
+            <source src="gg.mp4" type="video/mp4">
+
+          </video>
+<<<<<<< HEAD
+          <a href=gg.mp4" download="guiltyglicth.mp4" class="download">download</a>
+=======
+          <a href="animated/gg.mp4" download class="download" >download</a>
+>>>>>>> 79582a2a3430257724a6347c2b103f4ffaf10eb5
+        </div>
+        <a class="toggle-button">guilty rainbow storm</a>
+        <div class="pre" id="3">
+          <div class="preview">
+            <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
+              <source src="grs.mp4" type="video/mp4">
+
+            </video>
+          </div>
+          <p> click again to hide </p>
+          <a href=grs.mp4" download="grs.mp4" class="download">download</a>
+        </div>
+        <a class="toggle-button">guilty with text</a>
+        <div class="pre" id="4">
+          <p> click again to hide </p>
+          <div class="preview">
+            <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
+              <source src="gwt.mp4" type="video/mp4">
+
+            </video>
+            <a href="./gwt.mp4" download="gwt.mp4" class="download">download</a>
+          </div>
+          <a class="toggle-button" style="margin: 0% 15% 0% 15%">text only</a>
+          <div class="pre" id="5">
+            <p> click again to hide </p>
+            <div class="preview">
+              <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
+                <source src="to.mp4" type="video/mp4">
+
+              </video>
+              <a href="./to.mp4" download="guiltyto.mp4" class="download">download</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <a class="toggle-button">ultimate guilty arkbroker</a>
+    <div class="pre" id="4">
+      <p> click again to hide </p>
+      <a class="toggle-button" style="margin: 0% 35% 0% 35% ">v1</a>
+
+      <div class="preview" style="display:none">
+
+        <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
+          <source src="ulti.mp4" type="video/mp4">
+        </video>
+
+        <a href="./ulti.mp4" download="guilty-ark.mp4" class="download">download</a>
+        <br><br>
+      </div>
+      <a class="toggle-button" style="margin: 2% 35% 0% 35%">v2</a>
+      <div class="preview" style="display:none">
+        <video width=45%" height=45%" control controlsList="nodownload" autoplay loop muted>
+          <source src="ulti2.mp4" type="video/mp4">
+
+        </video>
+
+        <a href="./ulti2.mp4" download="guiltyark2.mp4" class="download">download</a>
+      </div>
+    </div>
+    <div class="pngs">
+      <br><br>
+      <h3>PNG'S</h3>
+      <p>use the download button</p>
+      <br><br>
+      <div class="png" id="gv2i">
+        <a class="toggle-button">OG</a>
+        <div class="prepng" style="display:none">
+
+          <div><img src="gl1w.png" style="max-width:35%"></div>
+          <a href="./gl1w.png" download="guilty_og.png" class="download">download </a>
+          <div><img src="gl1.png" style="max-width:35%"></div>
+          <a href="./gl1.png" download="guilty_ogblack.png" class="download">download </a>
+        </div>
+
+        <a class="toggle-button">v2</a>
+        <div class="prepng2" style="display:none">
+
+          <div><img src="logo2w.png" style="max-width:35%"></div>
+          <a href="./logo2w.png" download="guiltyrevamp.png" class="download">download </a>
+          <div><img src="logo2.png" style="max-width:35%"></div>
+          <a href="./logo2.png" download="guiltrevampb.png" class="download">download </a>
+        </div>
+        <a class="toggle-button" id="gtext">G</a>
+        <div class="prepng3"  style="display:none">
+
+          <div><img src="gtext.png" style="max-width:35%"></div>
+          <a href="./gtext.png" download="guilty-text-nuel.png" class="download">download </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    //button h&show
+    //jquery
+
+
+    $(document).ready(function () {
+      history.replaceState({}, null, "/");
+      $(".toggle-button").click(function () {
+        $(this).next().slideToggle([200]);
+
+      });
+      $(".bnb2").click(function () {
+        $(".prepng3").slideToggle(200);
+
+      });
+      $(".bnb").click(function () {
+        $("#1").slideToggle(200);
+
+      });
+    });
+  </script>
+</body>
+
+</html>
