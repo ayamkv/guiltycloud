@@ -6,8 +6,7 @@
         <meta name="google-site-verification" content="2f8NCUVhbGT1QVm_6Lx_LD01Kea7nUJb9V9iqeBBqRU"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
-
+        <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha256.js"></script>
         <title>Login | Guiltyness</title>
         <link rel="icon" href="https://i.ibb.co/C5H3mMW/favicon2s.png">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -167,7 +166,7 @@
             function loadPage(pwd) {
 
                 var hash = pwd;
-                hash = Sha1.hash(pwd);
+                hash = Sha256.hash(pwd);
                 var url = hash + "/index.html";
 
                 $.ajax({
