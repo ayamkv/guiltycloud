@@ -2,13 +2,72 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<script data-ad-client="ca-pub-4112379766065410" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<title>Redirect...</title>
-		<script>
-			history.replaceState({}, null, "/redirect?=youwillneverknow")
-			window.location.replace("https://cutt.ly/5nAGOEt");
+		<style>
+			div {
+				line-height: 1;
+				margin-top: 5em;
+				text-align: center;
+			}
+		</style>
+		<link rel="stylesheet" href="../style.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet"> 
+		<script>	
+            history.replaceState({}, null, "/redirect?=youwillneverknow")
 		</script>
 	</head>
 	<body>
-		<p>Redirecting you to Google Drive.</p>
+		<header>
+			<p id="para">Redirecting you to Google Drive...</p>
+		</header>
+		
+		<progress value="0" max="10" id="progressBar"> </progress>
+		
+		<div id="countdown"> </div>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- ad -->
+		<ins class="adsbygoogle"
+			style="display:block"
+			data-ad-client="ca-pub-4112379766065410"
+			data-ad-slot="5591205355"
+			data-ad-format="auto"
+			data-full-width-responsive="true"></ins>
+			<ins class="adsbygoogle"
+			style="display:block"
+			data-ad-client="ca-pub-4112379766065410"
+			data-ad-slot="8781503145"
+			data-ad-format="auto"
+    		 data-full-width-responsive="true"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
 	</body>
+	
+	<script>
+		// drive link
+		let url = 'https://cutt.ly/unDpBYv';
+		var timeleft = 5;
+		var downloadTimer = setInterval(function(){
+		if(timeleft <= 0){
+			clearInterval(downloadTimer);
+			document.getElementById("para").style.visibility = "hidden";
+			document.getElementById("countdown").innerHTML = "Redirecting to Google Drive";
+			alert('Redirecting... press OK')
+			window.location.replace = url;
+		} else {
+			document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+		}
+		document.getElementById("progressBar").value = 10 - timeleft;
+		timeleft -= 1;
+		
+		
+
+		}, 1000);
+
+
+	</script>
+
+
 </html>
